@@ -1,5 +1,5 @@
 import { describe, test, it, expect  } from "vitest";
-import { compareMinMaxValue, fizzBuzz, makeStringCapitalized } from ".";
+import { compareMinMaxValue, fizzBuzz, makeStringCapitalized, randomBool } from ".";
 
 
 // describe('Check for max', () => {
@@ -113,3 +113,26 @@ import { compareMinMaxValue, fizzBuzz, makeStringCapitalized } from ".";
 //     expect(data).toEqual([1,2,3])
 // })
 
+
+describe('Testing to Falsy, to Truthy', () => {
+    it('Truth',() => {
+        expect(randomBool(5)).toBeTruthy()
+    })
+    it('Truth',() => {
+        expect(randomBool(0)).toBeTruthy()
+    })
+    it('Truth',() => {
+        expect(randomBool(-5)).toBeTruthy()
+    })
+
+
+    it('False',() => {
+        expect(randomBool(15)).toBeFalsy()
+    })
+    it('False',() => {
+        expect(randomBool(5000)).toBeFalsy()
+    })
+    it('False',() => {
+        expect(randomBool(11)).toBeFalsy()
+    })
+})

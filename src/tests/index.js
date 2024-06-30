@@ -13,3 +13,7 @@ export function fizzBuzz(n) {
     if (n % 5 === 0) return 'Buzz'
     return ""+n;
 }
+
+export const randomBool = (num) => {
+    return num < 10;
+}
